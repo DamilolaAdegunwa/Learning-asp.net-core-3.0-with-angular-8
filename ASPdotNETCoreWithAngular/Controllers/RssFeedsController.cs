@@ -8,10 +8,6 @@ using System.Xml.Linq;
 //still working
 //started work!!
 //still working
-//started work!!
-//still working
-//started work!!
-//still working
 namespace ASPdotNETCoreWithAngular.Controllers
 {
     [ApiController]
