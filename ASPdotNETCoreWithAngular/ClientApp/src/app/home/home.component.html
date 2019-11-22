@@ -1,0 +1,36 @@
+<div style="text-align:center">
+  <h1 style="margin-top:10px;">
+    Welcome to Angular <b style="color:crimson">8</b> with ASP.NET Core <b style="color:navy">3.0</b>
+  </h1>
+  <img width="200" alt="Angular ASP.Net Core Logo" src="../assets/angularcore.png" />
+  <div class="card" style="margin-left:50px; margin-right:50px; margin-bottom:50px;">
+    <div class="card-header" style="font-weight:bold; font-size:x-large;">
+      C# Corner Latest Posts from RSS Feeds
+    </div>
+    <div class="card-body">
+      <div class="table-responsive" style="max-height:385px;">
+        <table class="table mb-0" *ngIf="latestPosts && latestPosts.length>0">
+          <thead>
+            <tr>
+              <th>Sl.No</th>
+              <th>Post Title(With Link)</th>
+              <th>Post Type</th>
+              <th>Published Date</th>
+              <th>Author</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let post of latestPosts; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td style="text-align:left;"><a href="{{post.link}}" target="_blank">{{post.title}}</a></td>
+              <td>{{ post.feedType }}</td>
+              <td>{{ post.publishDate }}</td>
+              <td>{{ post.author}} </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
